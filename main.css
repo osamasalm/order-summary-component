@@ -1,0 +1,158 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--paleblue);
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat:repeat-x;
+}
+
+:root {
+    --paleblue: hsl(225, 100%, 94%);
+    --brightblue: hsl(245, 75%, 52%);
+    --vpaleblue: hsl(225, 100%, 98%);
+    --desaturatedblue: hsl(224, 23%, 55%);
+    --darkblue: hsl(223, 47%, 23%);
+}
+
+.container {
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    background-color: white;
+    border-radius: 0.5em;
+    overflow: hidden;
+    box-shadow: 7px 13px 15px 5px rgba(0,0,0,0.1);
+}
+
+.hero-img img {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.hero-txt h1 {
+    font-size: 1.4rem;
+    color: var(--darkblue);
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.hero-txt p {
+    margin: 0 2em 1.5em 2em;
+    color: var(--desaturatedblue);
+    font-weight: 500;
+}
+
+.plan {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--vpaleblue);
+    border-radius: 0.7em;
+}
+
+.plan-price {
+    display: flex;
+    align-items: center;
+    gap: 1.1em;
+}
+
+.plan-txt p {
+    line-height: 1.5;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--darkblue);
+    font-weight: 900;
+}
+
+.plan-txt .light {
+    font-weight: 500;
+    opacity: 0.4;
+}
+
+.plan a {
+    font-size: 0.9rem;
+    color: var(--brightblue);
+    transition: color 200ms;
+}
+
+.plan a:hover{
+    text-decoration: none;
+    color: #746CEA;
+    transition: color 200ms;
+}
+
+.order {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.order a{
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.proceed {
+    color: white;
+    background-color: var(--brightblue);
+    padding: 0.8em;
+    border-radius: 0.5em;
+    margin-bottom: 1.2em;
+    font-weight: 700;
+    box-shadow: 0px 16px 15px -3px hsl(245, 75%, 85%);
+    transition: background-color 200ms;
+}
+
+.proceed:hover {
+    background-color: #746CEA;
+    transition: background-color 200ms;
+}
+
+.cancel {
+    color: var(--darkblue);
+    font-weight: 700;
+    opacity: 0.6;
+    margin-bottom: 2.5em;
+    transition: opacity 200ms;
+}
+
+.cancel:hover {
+    opacity: 1;
+    transition: opacity 200ms;
+}
+
+@media (min-width: 450px) {
+    html {
+        font-size: 120%;
+    }
+
+    body {
+        background-image: url(images/pattern-background-desktop.svg);
+        background-repeat:repeat-x;
+    }
+}
+
+@media (max-width: 350px) {
+    html {
+        font-size: 70%;
+    }
+}
